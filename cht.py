@@ -1,34 +1,45 @@
 import csv
-from flask import Flask, render_template, request
-
-app = Flask(__name__)
+import time
 
 def ask_question(questions, variable_name):
-    print(f'AI: "Welcome to MindBot"')
+    print(f'AI: "HI! , welcome to MindBot"')
+    input("You: ")
     print(f'AI: "Are you facing unusual behavior with your kid?"')
-    response = input("You: ")
-    while response.lower() != 'no':
-        print(f'AI: "{questions}"')
-        response = input("You: ")
-        print("AI: Okay then, how can I help you?")
+    input("You: ")
     print(f'AI: "I am going to ask you some questions, are you ready?"')
-    response = input("You: ")
-    print(" ")
-    return {variable_name: response}
+    input("You: ")
+    print("")
 
-@app.route('/')
-def home():
-    # Read questions from CSV
-    questions_list = []
-    with open('General.csv', 'r') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            questions_list.append({
-                'Question': row['Questions'],
-                'Response': row['Response']
-            })
+    responses = {}
+    for question in questions.split(';'):
+        print(f'AI: "{question}"')
+        response = input("You (yes/no): ").lower()
+        while response not in ['yes', 'no']:
+            print('AI: "Please answer with either yes or no."')
+            response = input("You (yes/no): ").lower()
+        responses[question] = response
+    
+    return {variable_name: responses}
 
-    return render_template('MindBot.html', questions=questions_list)
+# Read questions from CSV
+with open('General.csv', 'r') as file:
+    reader = csv.DictReader(file)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    # Extract questions from CSV
+    questions = [row['Questions'] for row in reader]
+
+    # Ask questions and get user responses
+    question_info = ask_question(';'.join(questions), 'ASD_Response')
+
+    print("...")
+    time.sleep(1)
+    print("....")
+    time.sleep(1)
+    print(".....")
+
+    # Check the responses from the user
+    yes_count = sum(response.lower() == 'yes' for response in question_info['ASD_Response'].values())
+    if yes_count >= 5:
+        print('AI: "Thank you for answering the questions. If you answered with 5 yes or more, then your kid may have ASD. Consulting a specialist will give you a more clear diagnosis."')
+    else:
+        print('AI: "Thank you for answering the questions. It seems unlikely that your kid has ASD, but consulting a specialist is always a good idea for confirmation."')
