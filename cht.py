@@ -42,4 +42,4 @@ with open('General.csv', 'r') as file:
     if yes_count >= 5:
         print('AI: "Thank you for answering the questions. If you answered with 5 yes or more, then your kid may have ASD. Consulting a specialist will give you a more clear diagnosis."')
     else:
-        print('AI: "Thank you for answering the questions. It seems unlikely that your kid has ASD, but consulting a specialist is always a good idea for confirmation."')
+        print('AI: "Thank you for answering the questions. It seems that your kid has ASD, but consulting a specialist is always a good idea for confirmation."')
