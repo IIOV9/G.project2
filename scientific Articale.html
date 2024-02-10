@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Articles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #articles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        article {
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .article-image {
+            width:100%; /* تحديد عرض الصورة بنسبة مئوية من العرض الكامل للعنصر الأب */
+            max-width: 300px; /* تحديد أقصى عرض للصورة */
+            height: auto; /* السماح بتغيير الارتفاع تلقائيًا استنادًا إلى النسبة المئوية للعرض */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Scientific Articles</h1>
+    <button onclick="showAllArticles()">All Articles</button>
+    <button onclick="showBehaviorArticles()">Behaviors</button>
+    <button onclick="showAutismArticles()">Deal With Autism</button>
+</header>
+
+<section id="articles">
+    <!-- Articles related to Behaviors -->
+    <article class="behavior">
+        <h2><a href="https://www.researchgate.net/profile/Marie-Nebel-Schwalm/publication/6818390_Assessing_challenging_behaviors_in_children_with_autism_spectrum_disorders_A_review/links/63903f7fe42faa7e75a0fa25/Assessing-challenging-behaviors-in-children-with-autism-spectrum-disorders-A-review.pdf">Assessing challenging behaviors in children with autism spectrum disorders</a></h2>
+        <img class="article-image" src="B1s.jpeg" alt="Article Image">
+        <p><strong>Author:</strong> Johnny L. Matson, Marie Nebel-Schwalm</p>
+        <p><strong>Date:</strong> 1 August 2006</p>
+        <p><strong>Abstract:</strong>A common covarying group of behaviors with ASD are self-injury, aggression, noncompliance, and stereotypies.</p>
+    </article>
+
+    <article class="behavior">
+        <h2><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9324526/">Understanding Challenging Behaviors in Autism Spectrum Disorder</a></h2>
+        <img class="article-image" src="B3.jpeg" alt="Article Image">
+        <p><strong>Author:</strong> Stephen M.Edelson , Juergen Hahn</p>
+        <p><strong>Date:</strong> 12 Jul 2022</p>
+        <p><strong>Abstract:</strong> A multi-component, interdisciplinary model is described which explains the presence of, and in other cases the lack of, many challenging behaviors associated with autism spectrum disorder (ASD).</p>
+    </article>
+
+    <article class="behavior">
+        <h2><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.986876/full">Restricted and repetitive behavior in children with autism during the first three years of life</a></h2>
+        <img class="article-image" src="B3a.jpeg" alt="Article Image">
+        <p><strong>Author:</strong> John Smith</p>
+        <p><strong>Date:</strong> 31 October 2022</p>
+        <p><strong>Abstract:</strong> Restricted and repetitive behavior (RRB) is a core diagnostic feature of autism spectrum disorder (ASD).</p>
+    </article>
+
+    <article class="behavior">
+        <h2><a href="file:///C:/Users/96650/Downloads/Describing_the_Unusual_Behavior_of_Children_with_A.pdf">Describing the Unusual Behavior of Children with Autism</a></h2>
+        <img class="article-image" src="B4.jpeg" alt="Article Image">
+        <p><strong>Author:</strong> JUDITH FELSON DUCHAN</p>
+        <p><strong>Date:</strong> 14 March 1998</p>
+        <p><strong>Abstract:</strong> Readers will be able to recognize that the different behaviors exhibited by children with autism depend upon the goals, the audience, the frame of reference, and the point of view of the describer.</p>
+    </article>
+
+    <article class="behavior">
+        <h2><a href="https://psycnet.apa.org/fulltext/2014-55585-006.pdf">Social, Language, and Play Behaviors of Children with Autism</a></h2>
+        <img class="article-image" src="B5.jpeg" alt="Article Image">
+        <p><strong>Author:</strong> Jarrold</p>
+        <p><strong>Date:</strong> 14 Spring 2008</p>
+        <p><strong>Abstract:</strong> This article aims to summarize the current literature as it relates to the social, language, and play behaviors of children with autism and to provide an overview of currently available interventions reflecting the variety of objectives.</p>
+    </article>
+
+    <article class="behavior">
+        <h2><a href="https://www.hhs.texas.gov/services/disability/autism/autism-training-opportunities/autism-spectrum-disorders-training-program-first-responders/module-4-common-behavior-characteristics-individuals-autism-spectrum-disorder-asd">Common Behavior Characteristics of Individuals with Autism Spectrum Disorder (ASD)</a></h2>
+        <img class="article-image" src="B6.jpeg" alt="Article Image">
+        <p><strong>Author:</strong> Michael </p>
+        <p><strong>Date:</strong> 1 May 2021</p>
+        <p><strong>Abstract:</strong> individuals with ASD characteristically exhibit atypical behaviors in three areas: communication, behavior, and social interactions. In this module, we will discuss unusual behaviors that you may observe in an individual with autism.</p>
+    </article>
+
+    <!-- Articles related to Autism -->
+    <article class="Deal With Autism">
+        <h2><a href="https://www.helpguide.org/articles/autism-learning-disabilities/autism-spectrum-disorders.htm">Autism Spectrum Disorders (ASD) </a></h2>
+        <img class="article-image" src="B7.jpeg" alt="Article Image">
+        <p><strong>Author:</strong> Melinda Smith, Jeanne Segal</p>
+        <p><strong>Date:</strong> 18 February 2019</p>
+        <p><strong>Abstract:</strong> This parent’s guide to symptoms and diagnosis can help you better understand your child, decipher all the different autism terms, and make it easier to communicate with doctors, teachers, and therapists.</p>
+    </article>
+
+    <article class="Deal With Autism">
+        <h2><a href="https://www.goldenstepsaba.com/resources/dealing-with-autistic-children">How To Deal With Children With Autism: Do's & Don'ts</a></h2>
+        <img class="article-image" src="B8.jpeg" alt="Article Image">
+        <p><strong>Author:</strong> Golden Steps ABA</p>
+        <p><strong>Date:</strong> 19 June 2023 </p>
+        <p><strong>Abstract:</strong> Dealing with children on the autism spectrum can be challenging. Here are some tips: Autism is a developmental disorder that affects communication and social interaction.</p>
+    </article>
+
+    <article class="Deal With Autism">
+        <h2><a href="https://www.urmc.rochester.edu/encyclopedia/content.aspx?contenttypeid=160&contentid=46">Interacting with a Child Who Has Autism Spectrum Disorder</a></h2>
+        <img class="article-image" src="B9.jpeg" alt="Article Image">
+        <p><strong>Author:</strong> Health Encyclopedia</p>
+        <p><strong>Date:</strong> 1 May 2024</p>
+        <p><strong>Abstract:</strong> Many children with ASD can learn to communicate and interact. Healthcare providers and mental health experts have learned a lot about how to break through to these children.</p>
+    </article>
+
+    <article class="Deal With Autism">
+        <h2><a href="https://www.webmd.com/brain/autism/parenting-child-with-autism">Parenting a Child on the Autism Spectrum</a></h2>
+        <img class="article-image" src="B10.jpeg" alt="Article Image">
+        <p><strong>Author:</strong>  Dan Brennan</p>
+        <p><strong>Date:</strong> 2 September 2023</p>
+        <p><strong>Abstract:</strong>  children with autism spectrum disorder often respond well to positive reinforcement. That means when you praise them for the behaviors they’re doing well, it will make them (and you) feel good.</p>
+    </article>
+
+    <article class="Deal With Autism">
+        <h2><a href="https://www.lybrate.com/topic/autistic-children-5-effective-ways-you-can-handle-them/956b3d27c43cbd4376355b2cdee15a3e">Autistic Children - 5 Effective Ways You Can Handle Them</a></h2>
+        <img class="article-image" src="B11.jpeg" alt="Article Image">
+        <p><strong>Author:</strong> Dr. Gaurav Uppal</p>
+        <p><strong>Date:</strong> 27 June 2024</p>
+        <p><strong>Abstract:</strong>An autistic child is way more sensitive than other children. Dealing with them can be challenging for the parents but it is not impossible.</p>
+    </article>
+
+    <article class="Deal With Autism">
+        <h2><a href="https://behavioral-innovations.com/blog/top-things-parents-should-not-do-with-a-child-with-autism/">Top Things Parents Should NOT Do With a Child With Autism</a></h2>
+        <img class="article-image" src="B12.jpeg" alt="Article Image">
+        <p><strong>Author:</strong> Sarah </p>
+        <p><strong>Date:</strong> 23 August 2024</p>
+        <p><strong>Abstract:</strong> In this article, we will explore some of the things that parents and other caregivers, such as teachers or childcare providers, should not do when it comes to caring for and teaching a child with autism spectrum disorder.</p>
+    </article>
+</section>
+
+<script>
+    function showAllArticles() {
+        var articles = document.querySelectorAll('article');
+        articles.forEach(function(article) {
+            article.classList.remove('hidden');
+        });
+    }
+
+    function showBehaviorArticles() {
+        showAllArticles();
+        var autismArticles = document.querySelectorAll('.autism');
+        autismArticles.forEach
+        autismArticles.forEach(function(article) {
+            article.classList.add('hidden');
+        });
+    }
+
+    function showAutismArticles() {
+        showAllArticles();
+        var behaviorArticles = document.querySelectorAll('.behavior');
+        behaviorArticles.forEach(function(article) {
+            article.classList.add('hidden');
+        });
+    }
+    
+</script>
+
+</body>
+</html>
