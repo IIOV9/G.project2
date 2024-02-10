@@ -1,70 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scientific Articles</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f2f2f2;
-        }
+<title> Autistic Mindset</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+<link rel="icon" href="C:\Users\الحمد لله\Downloads\G.project\images\HOME icon.png" type="image/x-icon">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        #articles {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
 
-        article {
-            width: 300px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin: 10px;
-        }
 
-        h2 {
-            color: #333;
-            margin-top: 0;
-        }
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-        p {
-            color: #666;
-            margin-bottom: 10px;
-        }
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  background-color: #f2f2f2;
+}
 
-        a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/mac.jpg");
+  min-height: 100%;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+.w3-bar .w3-button {
+  padding: 16px;
+}
 
-        .hidden {
-            display: none;
-        }
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        .article-image {
-            width:100%; /* تحديد عرض الصورة بنسبة مئوية من العرض الكامل للعنصر الأب */
-            max-width: 300px; /* تحديد أقصى عرض للصورة */
-            height: auto; /* السماح بتغيير الارتفاع تلقائيًا استنادًا إلى النسبة المئوية للعرض */
-        }
-    </style>
+#articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+.article-image {
+    width:100%; /* تحديد عرض الصورة بنسبة مئوية من العرض الكامل للعنصر الأب */
+    max-width: 300px; /* تحديد أقصى عرض للصورة */
+    height: auto; /* السماح بتغيير الارتفاع تلقائيًا استنادًا إلى النسبة المئوية للعرض */
+}
+</style>
 </head>
 <body>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
 
+    <div class="w3-bar w3-white w3-hide-small" style="letter-spacing:4px;">
+      <a href="#home" class="w3-hover-Lights w3-bar-item">
+       <img src="C:\Users\الحمد لله\Downloads\G.project\images\HOME icon.png" alt="Logo" style="height: 40px;"> <!-- Adjust the height as needed -->
+     </a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#aboutus" class="w3-hover-pale-yellow w3-bar-item w3-button" id="ABOUT">ABOUT</a>
+        <a href="#team" class="w3-hover-pale-yellow w3-bar-item w3-button"id="TEAM"><i class="fa fa-user"></i> TEAM</a>
+        <div class="w3-hover-pale-yellow w3-middle w3-dropdown-hover w3-hide-small">
+           <button class="w3-bar-item w3-button"id="OURSERVICES" > OUR SERVICES <i class="fa fa-caret-down"></i></button>
+           <div class="w3-dropdown-content w3-bar-block w3-card-4">
+             <a href="C:\Users\lole\Desktop\G.PROJECT2\spicialist.html"target="_blank"class="w3-hover-pale-yellow w3-bar-item w3-button"id="SpecialistCare">specialist care</a>
+             <a href="C:\Users\lole\Desktop\G.PROJECT2\templates\MindBot.html"target="_blank"class="w3-hover-pale-yellow w3-bar-item w3-button"id="MindBOT">MindBot</a>
+             <a href="C:\Users\lole\Desktop\G.PROJECT2\community.html"target="_blank" class="w3-hover-pale-yellow w3-bar-item w3-button"id="community">community</a>
+           </div>
+
+        </div>
+
+      <a href="#contact" class="w3-hover-pale-yellow w3-bar-item w3-button"id="contact"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
 <header>
-    <h1>Scientific Articles</h1>
+ <h1>Scientific Articles</h1>
     <button onclick="showAllArticles()">All Articles</button>
     <button onclick="showBehaviorArticles()">Behaviors</button>
     <button onclick="showAutismArticles()">Deal With Autism</button>
