@@ -38,18 +38,45 @@
         .w3-card:hover {
             box-shadow: 0 8px 16px rgba(237, 41, 218, 0.2);
         }
-
-        .w3-bar .w3-button {
-            padding: 16px;
+        .button {
+            font-size: 12px; 
+            width: 100px; 
+            background-color: white;
+            border: 1px solid #060606;
+            color: black;
+            padding: 10px; 
+            margin: 4px 2px;
+            border-radius: 8px;
         }
-
-        footer {
-            background-color: #f3f7f8;
-            color: #0b0b0b;
-            text-align: center;
-            padding: 0px;
+        
+        .button:hover {
+            background-color: #a7abab;
         }
-
+        
+        .button span {
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -10px; /* Adjusted right position */
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 15px; /* Adjusted padding */
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
         .image-container {
             display: flex;
             justify-content: center;
@@ -60,6 +87,13 @@
         .locations-container {
             text-align: center;
             margin-top: 50px; /* Add space between image and locations */
+        }
+        
+        footer {
+            background-color: #f3f7f8;
+            color: #0b0b0b;
+            text-align: center;
+            padding: 0px;
         }
     </style>
 </head>
@@ -93,7 +127,7 @@
     <div class="w3-main">
         <div class="w3-panel">
             <div class="image-container">
-                <img src="C:\Users\Nada6\OneDrive\سطح المكتب\G2.project\images\saudi map.jpg" style="width: 1500px; height: 350px;" alt="Google Regional Map">
+                <img src="C:\Users\Nada6\OneDrive\سطح المكتب\G2.project\images\Spec.jpg" style="width: 1500px; height: 350px;" alt="Google Regional Map">
             </div>
             <div class="locations-container">
                 <div class="w3-card">
@@ -120,30 +154,30 @@
                     <a href="https://maps.app.goo.gl/xixo9Ef1KVRtjdDu6" class="fa fa-map-marker w3-button w3-light-grey w3-block w3-hover-shadow">الجرف </a>
                 </div>
                 <div class="w3-card">
-                    <p><b>جمعية أسر التوحد</b></p>
-                    <form id="locationForm">
-                        <div class="label-container">
-                            <label for="locations">:اختر العنوان</label>
-                        </div>
-                        <select id="locations" name="locations">
-                            <option value="https://maps.app.goo.gl/XENP3Lim66g3KMDcA"> الرياض</option>
-                            <option value="https://maps.app.goo.gl/Zq1e5sfqgdghiyrz9"> الدمام</option>
-                            <option value="https://maps.app.goo.gl/Rud4ddmaPCV6ox989"> الدوادمي</option>
-                            <option value="https://maps.app.goo.gl/YxnQCCR6Uphsoip89"> الخرج</option>
-                            <option value="https://maps.app.goo.gl/DRccPbeZNYyv3maj9"> خميس مشيط</option>
-                            <option value="https://maps.app.goo.gl/FLCHHDciR4DesFmX7"> أبها</option>
-                        </select>
-                        <!-- Submit button to open the selected location on the same page -->
-                        <input type="submit" value="انتقل إلى الموقع">
-                    </form>
-                    <script>
-                        document.getElementById("locationForm").addEventListener("submit", function(event) {
-                            event.preventDefault(); // Prevent form submission
-                            var selectedLocation = document.getElementById("locations").value;
-                            window.location.href = selectedLocation; // Redirect to selected location on the same page
-                        });
-                    </script>
-                </div>          
+    <p><b>جمعية أسر التوحد</b></p>
+    <form id="locationForm">
+        <div class="label-container">
+            <label for="locations">:اختر العنوان</label>
+        </div>
+        <select id="locations" name="locations">
+            <option value="https://maps.app.goo.gl/XENP3Lim66g3KMDcA"> الرياض</option>
+            <option value="https://maps.app.goo.gl/Zq1e5sfqgdghiyrz9"> الدمام</option>
+            <option value="https://maps.app.goo.gl/Rud4ddmaPCV6ox989"> الدوادمي</option>
+            <option value="https://maps.app.goo.gl/YxnQCCR6Uphsoip89"> الخرج</option>
+            <option value="https://maps.app.goo.gl/DRccPbeZNYyv3maj9"> خميس مشيط</option>
+            <option value="https://maps.app.goo.gl/FLCHHDciR4DesFmX7"> أبها</option>
+        </select>
+        <!-- Submit button to open the selected location on the same page -->
+        <button class="button" style="vertical-align:middle"><span>انتقل الى الموقع </span></button>
+    </form>
+    <script>
+        document.getElementById("locationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            var selectedLocation = document.getElementById("locations").value;
+            window.location.href = selectedLocation; // Redirect to selected location on the same page
+        });
+    </script>
+</div>
 
             </div>
         </div>
